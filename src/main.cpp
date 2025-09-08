@@ -5,7 +5,6 @@
 // Example 1: Member Alignment //
 /////////////////////////////////
 
-
 struct Foo {
     uint32_t a; // 4
     uint8_t  b; // 1
@@ -134,8 +133,8 @@ int main(void) {
 		w
 	};
 
-	ptrdiff_t m2_relative = (char *)&m_array[1] - (char *)&m_array[0];
-	ptrdiff_t w2_relative = (char *)&w_array[1] - (char *)&w_array[0];
+	ptrdiff_t m1_relative = (char *)&m_array[1] - (char *)&m_array[0];
+	ptrdiff_t w1_relative = (char *)&w_array[1] - (char *)&w_array[0];
 
 	printf("\nExample 2\n---------\n");
 
@@ -144,13 +143,13 @@ int main(void) {
 
 	printf("\n[Moo Array]\n");
 	printf("Address of 1st Moo: 0x%#tx\n", 0);
-	printf("Address of 2nd Moo: %#tx\n", m2_relative);
-	printf("Difference between addresses: %td\n", m2_relative);
+	printf("Address of 2nd Moo: %#tx\n", m1_relative);
+	printf("Difference between addresses: %td\n", m1_relative);
 	
 	printf("\n[Woo Array]\n");
 	printf("Address of 1st Woo: 0x%#tx\n", 0);
-	printf("Address of 2nd Woo: %#tx\n", w2_relative);
-	printf("Difference between addresses: %td\n", w2_relative);
+	printf("Address of 2nd Woo: %#tx\n", w1_relative);
+	printf("Difference between addresses: %td\n", w1_relative);
 	
 	return 0;
 }
