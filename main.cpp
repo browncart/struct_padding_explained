@@ -153,3 +153,27 @@ int main(void) {
 	
 	return 0;
 }
+
+////////////
+// Output //
+////////////
+
+//Example 1
+//---------
+//Foo has size: 24
+//Goo has size: 16
+//
+//Example 2
+//---------
+//Moo has size: 9
+//Woo has size: 16
+//
+//[Moo Array]
+//Address of 1st Moo: 0x0
+//Address of 2nd Moo: 0x9
+//Difference between addresses: 9
+//
+//[Woo Array]
+//Address of 1st Woo: 0x0
+//Address of 2nd Woo: 0x10
+//Difference between addresses: 16
