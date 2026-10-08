@@ -177,3 +177,10 @@ int main(void) {
 //Address of 1st Woo: 0x0
 //Address of 2nd Woo: 0x10
 //Difference between addresses: 16
+
+//Final note:
+//Unaligned loads and stores are not friendly to multithreaded applications. An unaligned load of a simple variable, say an `int`, 
+//can require two loads in reality, which are combined to produce the final value. It is possible for a CPU to context switch
+//between those loads (which may be *individually* atomic), allowing a new thread to write into the second loaded address. Once the
+//CPU switches back, the second load will see new, irrelevant data, which will be stitched with the previous load and create chaos.
+//This is called a "torn read". Just one more reason to understand padding and memory alignment!
